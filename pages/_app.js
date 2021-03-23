@@ -1,6 +1,10 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import '../styles/globals.css'
 
+
+// eslint-disable-next-line react/prop-types
 function MyApp({ Component, pageProps }) {
+  // eslint-disable-next-line react/react-in-jsx-scope
   return <Component {...pageProps} />
 }
 
