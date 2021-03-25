@@ -7,6 +7,7 @@ import Skills from '../components/Skills';
 import Aboutme from '../components/Aboutme';
 import Services from '../components/Services';
 import Contactme from '../components/Contactme';
+import Projects from '../components/Projects';
 
 export default function Home():JSX.Element {
   return (
@@ -16,6 +17,7 @@ export default function Home():JSX.Element {
       <Aboutme/>
       <Services/>
       <Skills/>
+      <Projects/> 
       <Contactme/>
     </Layout>
     </div>
