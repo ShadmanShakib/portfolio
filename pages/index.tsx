@@ -10,7 +10,6 @@ import Contactme from '../components/Contactme';
 import Projects from '../components/Projects';
 
 export default function Home({data}:any):JSX.Element {
-  console.log(data)
   return (
     <div className="">
     <Layout>
