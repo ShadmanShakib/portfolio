@@ -16,14 +16,19 @@ function Feature():JSX.Element {
            <h1  className="font-semibold mt-16   py-2 bg-green-300 text-white rounded-tl-3xl px-5  text-center rounded-r-3xl">Hello I am</h1>
           <h1 className="text-4xl xl:text-5xl font-semibold mt-3 text-gray-800">Shadman Shakib</h1>
           <h1 className="text-xl font-semibold mt-3">Front-end Developer</h1>
+          {/* Social media links */}
           <div className="flex my-10 ">
           <div className="bg-gray-300 p-2 rounded-full">
               <img className="h-6 w-6" src="/images/gmail.svg" alt=""/>
           </div>
           <div className="bg-gray-300 h-10 w-10 flex items-center justify-center mx-4  rounded-full ">
+              <a href="http://twitter.com/shadmanshakib_" target="_blank" rel="noopener noreferrer">
               <img className="h-6 w-6 fill-current text-blue-500" src="/images/twitter.svg" alt="twitter"/>
+              </a>
           </div>
-              <img className="w-10 h-10 rounded-full" src="/images/github.svg" alt=""/>
+              <a target="_blank" rel="noreferrer" href="https://github.com/shadmanshakib">
+                  <img className="w-10 h-10 rounded-full" src="/images/github.svg" alt=""/>
+              </a>
     
           </div>
           </div>
