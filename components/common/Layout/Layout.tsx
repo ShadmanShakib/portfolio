@@ -1,6 +1,5 @@
 import React from 'react'
-import Footer from './Footer'
-import Header from './Header'
+import {Header,Footer} from '@components/common'
 
 function Layout({children}:any):JSX.Element {
     return (
