@@ -1,5 +1,5 @@
 import React from 'react'
-function Feature():JSX.Element {
+function Hero():JSX.Element {
     return (
         <React.Fragment>
         <div  className="flex  px-3 items-center xl:flex-row-reverse  justify-center flex-col pt-10 ">
@@ -37,4 +37,4 @@ function Feature():JSX.Element {
     )
 }
 
-export default Feature
+export default Hero
