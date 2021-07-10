@@ -11,7 +11,7 @@ function Header():JSX.Element {
             </div>
                <ul className="hidden xl:flex justify-around w-96">
                    <li>HOME</li>
-                   <li>ABOUT ME</li>
+                    <Link href="/blog">Blog</Link>
                    <li>SKILLS</li>
                    <li>PROJECTS</li>
                </ul>

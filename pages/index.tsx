@@ -5,7 +5,7 @@ import {ProjectCard} from '@components/projects'
 
 export default function Home({data}:any):JSX.Element {
   return (
-    <div className="">
+    <div className="max-w-screen-xl mx-auto">
       <Hero/>
       <About/>
       <Services/>
