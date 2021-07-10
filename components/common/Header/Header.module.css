@@ -1,0 +1,7 @@
+.container{
+    @apply h-16 flex items-center shadow-lg justify-between px-3 xl:justify-around;
+}
+
+.menuIcon{
+    @apply xl:hidden;
+}
