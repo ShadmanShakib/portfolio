@@ -9,8 +9,8 @@ function Aboutme():JSX.Element {
             </div>
             <div className="w-1/2 ml-6 flex items-center flex-col justify-center">
             <h1 className="text-4xl mb-10  bg-green-500 rounded-sm text-white py-2 px-5 font-semibold">About me</h1>
-            <p className="text-2xl text-center font-semibold">Hi, Im Shadman Shakib, a self taught front-end web developer. 
-               I will do any front-end work you want.
+            <p className="text-2xl text-center font-semibold">Hi, Im Shadman Shakib, React/React Native Developer. 
+               Here you help your dream website or app and grow your business.
             </p>
             </div>
          

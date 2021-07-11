@@ -10,11 +10,11 @@ function Header():JSX.Element {
            
           <h1 className=" block font-bold text-xl text-green-500"><Link  href="/">S.SHAKIB</Link></h1> 
             </div>
-               <ul className="hidden uppercase xl:flex justify-around w-96">
-                   <li>About Me</li>
+               <ul className="hidden uppercase xl:flex items-center justify-around w-96">
+                    <Link href="/aboutme">About me</Link>
                     <Link href="/blog">Blog</Link>
-                   <li>SKILLS</li>
-                   <li>PROJECTS</li>
+                    <Link href="/projects">Projects</Link>
+                    <button className="bg-black text-white py-1 px-5 rounded-3xl">Hire me</button>
                </ul>
          <Menu className={styles.menuIcon}/>
         </div>

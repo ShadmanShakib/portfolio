@@ -30,7 +30,7 @@ function Skills():JSX.Element {
             <Card name="Next.JS" src="/images/next-js.svg" />
             <Card name="GraphQL" src="/images/graphql.svg" />
             <Card name="Node JS" src="/images/nodejs.svg" />
-            <Card name="Git" src="/images/giticon.png" />
+            <Card name="Git" src="/images/GitIcon.png" />
             <Card name="Tailwind CSS" src="/images/tailwindcss.svg"/>
             <Card name="Ant-Design" src="/images/ant-design.svg"/>
         </div>
