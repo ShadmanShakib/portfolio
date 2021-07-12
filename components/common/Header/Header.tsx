@@ -1,21 +1,22 @@
 import React from 'react';
 import Link from 'next/link';
-
+import styles from './Header.module.css';
+import {Menu} from '@components/icons'
 
 function Header():JSX.Element {
     return (
-        <div  className="h-16 flex items-center shadow-lg justify-around">
+        <div  className={styles.container}>
             <div className="flex items-center">
-            <img className="h-10 w-10 border-2 border-green-500 rounded-full" src="/images/shadman.jfif"  alt="Shadman Shakib"/>
-          <h1 className="ml-3 font-bold text-xl text-green-500"><Link  href="/">SHADMAN SHAKIB</Link></h1> 
+           
+          <h1 className=" block font-bold text-xl text-green-500"><Link  href="/">S.SHAKIB</Link></h1> 
             </div>
-               <ul className="hidden xl:flex justify-around w-96">
-                   <li>HOME</li>
-                   <li>ABOUT ME</li>
-                   <li>SKILLS</li>
-                   <li>PROJECTS</li>
+               <ul className="hidden uppercase xl:flex items-center justify-around w-96">
+                    <Link href="/aboutme">About me</Link>
+                    <Link href="/blog">Blog</Link>
+                    <Link href="/projects">Projects</Link>
+                    <button className="bg-black text-white py-1 px-5 rounded-3xl">Hire me</button>
                </ul>
-         
+         <Menu className={styles.menuIcon}/>
         </div>
     )
 }

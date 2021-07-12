@@ -8,7 +8,7 @@ interface ServiceCard{
 
 const Card=({name,description,src}:ServiceCard)=>{
     return(
-        <div className="flex items-center w-full justify-center ">
+        <div className="flex flex-col xl:flex-row items-center  w-full justify-center ">
             <img className="h-96" src={src} alt=""/>
         <div className="ml-10">
         <h1 className="text-4xl text-green-600 font-semibold">{name}</h1>
@@ -24,7 +24,7 @@ const Card=({name,description,src}:ServiceCard)=>{
 }
 const ReverseCard=({name,description,src}:ServiceCard)=>{
     return(
-        <div className="flex items-center w-full justify-center ">
+        <div className="flex flex-col xl:flex-row items-center w-full justify-center ">
         <div className="ml-10">
         <h1 className="text-4xl text-green-600 font-semibold">{name}</h1>
         {description.map((item:string,index:number)=>{
