@@ -1,26 +1,36 @@
 import React from 'react';
 import {Formik,Form,Field,ErrorMessage} from 'formik';
-import { useFormspark } from "@formspark/use-formspark";
+import styles from './Contact.module.css'
 import * as Yup from 'yup';
-
+import { getFirestore,collection,addDoc } from "firebase/firestore";
 
 function Contactme():JSX.Element {
-  const FORM_ID = "aBx52fDC";
- const [submit,submitting]=useFormspark({formId:FORM_ID})
+  //getting the firestore
+  const db=getFirestore();
 
+interface FormData{
+  name:string,
+  email:string,
+  message:string,
 
- 
+}
+ const [message,setMessage]=React.useState("")
+ const handleSubmit=(data:FormData)=>{
+  addDoc(collection(db,"contacts"),data)
+  .then(()=>setMessage("Your message Submitted"))
+  .catch((err)=>{err && setMessage("Something went wrong")})
+}
+   
 
   return (
     <React.Fragment>
-      <div className="flex flex-col xl:flex-row justify-center bg-gray-100 py-10">
+      <div className={styles.container}>
         <img className="" src="/images/contact.svg" alt=""/>
-     
       <Formik
       initialValues={{name:'',email:'',message:""}}
       onSubmit={async (values,{setSubmitting})=>{
-      await submit(values)
-      alert('Form submitted')
+      await handleSubmit(values)
+      alert(message)
       ;setSubmitting(false)
       }}
       validationSchema={ Yup.object({
@@ -45,7 +55,7 @@ function Contactme():JSX.Element {
           <label className="text-xl mt-5 mb-2"  htmlFor="message">MESSAGE:</label>
           <Field as='textarea' rows={5} className="focus:outline-none focus:ring-2 ring-green-600 px-3 py-2 xl:w-96 rounded-sm " placeholder="Write message"  name="message"/>
           <div className="text-red-500"><ErrorMessage name="message"/></div>
-          <button className="bg-green-500 hover:bg-green-700 font-semibold focus:outline-none text-white rounded-sm mt-10 px-3 py-2" type="submit" disabled={submitting}>MESSAGE</button>
+          <button className="bg-green-500 hover:bg-green-700 font-semibold focus:outline-none text-white rounded-sm mt-10 px-3 py-2" type="submit" >MESSAGE</button>
         </Form>
 
       </Formik>

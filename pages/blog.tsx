@@ -9,10 +9,14 @@ function Blog({data}:any):JSX.Element {
             <Hero/>
             <div className="grid grid-col xl:grid-row xl:grid-cols-3">
             {items.map((item)=>{
-              const {id,title,images}=item
+              const {id,title,images}:{id:number,title:string,images:any }=item
 
                 return(
-                    <Post key={id} images={images}  title={title}/>
+                    <Post 
+                    key={id}
+                    id={id}
+                    images={images} 
+                    title={title}/>
                 )
             })}
             </div>
