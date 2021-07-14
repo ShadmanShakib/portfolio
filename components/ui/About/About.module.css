@@ -1,3 +1,17 @@
 .container{
-    
+    @apply items-center bg-green-50 py-10  mt-10 px-10 flex flex-col justify-center xl:flex-row
+}
+.title{
+    background: -webkit-linear-gradient(
+-70deg
+,#9867f0,#ed4e50);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    @apply text-3xl font-semibold;
+}
+.description{
+
 }
