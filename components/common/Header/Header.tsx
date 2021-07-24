@@ -1,30 +1,36 @@
 import React from "react";
 import Link from "next/link";
-import styles from "./Header.module.css";
 import { Menu, Light, Dark } from "@components/icons";
 import { Portal } from "@reach/portal";
 import PhoneMenu from "../PhoneMenu";
+import { useDarkMode } from "libs/hooks";
 
 function Header(): JSX.Element {
+  const { mode, currentMode, setCurrentMode } = useDarkMode();
   const [isOpen, setIsOpen] = React.useState(false);
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
   return (
     <>
-      <div className={styles.container}>
-        <div className="flex items-center justify-between max-w-screen-xl mx-auto  w-full ">
+      <div className="h-14 z-40 shadow-sm flex items-center fixed w-full  px-6 dark:bg-gray-800   bg-white">
+        <div className="flex items-center  justify-between max-w-screen-xl mx-auto  w-full ">
           <div className="flex items-center w-full justify-between xl:w-auto">
             <div onClick={handleClick} className="xl:hidden p-2 bg-gray-200">
-              <Menu className={styles.menuIcon} />
+              <Menu className="xl:hidden" />
             </div>
-            <h1 className=" block font-bold text-xl text-green-500">
+            <h1 className=" block font-bold text-xl  text-black">
               <Link href="/">Shadman Shakib</Link>
             </h1>
-            <div className="">
-              <Dark />
+            <div onClick={() => setCurrentMode(mode)} className="xl:hidden">
+              {currentMode === "dark" ? (
+                <Light className="fill-current text-gray-900" />
+              ) : (
+                <Dark className="fill-current text-white" />
+              )}
             </div>
           </div>
+
           {/* Large Screen Menu */}
           <ul className="hidden uppercase  xl:flex items-center justify-around w-96">
             <Link href="/aboutme">About me</Link>

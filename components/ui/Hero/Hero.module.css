@@ -1,19 +1,17 @@
-.container{
-    @apply flex  px-3 items-center xl:flex-row-reverse  justify-center flex-col pt-10;
+.container {
+  @apply flex  px-3 items-center xl:flex-row-reverse  justify-center flex-col pt-32;
 }
 
-.title{
-    -webkit-text-fill-color: transparent;
-    background: -webkit-linear-gradient(
--70deg
-,#db469f,#2188ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break:clone;
-    @apply text-xl font-semibold;
+.title {
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(-70deg, #db469f, #2188ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  @apply text-xl font-semibold;
 }
 
-.hello{
-    @apply font-semibold mt-16  bg-primary  py-2  text-white rounded-tl-3xl px-5  text-center rounded-r-3xl;
+.hello {
+  @apply font-semibold mt-16  bg-primary  py-2  text-white rounded-tl-3xl px-5  text-center rounded-r-3xl;
 }
