@@ -1,14 +1,15 @@
-import React from 'react'
-import {Header,Footer} from '@components/common'
+import React from "react";
+import { Header, Footer } from "@components/common";
 
-function Layout({children}:any):JSX.Element {
-    return (
-        <div className="max-w-screen-2xl w-full">
-            <Header/>
-            {children}
-            <Footer/>
-        </div>
-    )
+function Layout({ children }: any): JSX.Element {
+  return (
+    <div className="">
+      <Header />
+      <div className="max-w-screen-xl mx-auto">{children}</div>
+
+      <Footer />
+    </div>
+  );
 }
 
-export default Layout
+export default Layout;

@@ -1,7 +1,7 @@
-.container{
-    @apply h-16 flex  px-6 items-center bg-transparent justify-between max-w-screen-xl mx-auto xl:px-10;
+.container {
+  @apply h-14  flex items-center fixed w-full    bg-yellow-300;
 }
 
-.menuIcon{
-    @apply xl:hidden;
+.menuIcon {
+  @apply xl:hidden;
 }
