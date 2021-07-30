@@ -8,9 +8,6 @@ function Hero(): JSX.Element {
         {/* Protfolio image */}
 
         <div className=" relative   rounded-full">
-          <div className="absolute rounded-full opacity-40 z-0 -top-4 -right-4 -left-4 -bottom-4 bg-green-700"></div>
-          <div className="absolute rounded-full opacity-30 z-0 -top-8 -right-8 -left-8 -bottom-8 bg-green-700"></div>
-
           <img
             className="xl:w-64 w-48 h-48 relative z-10 xl:h-64 rounded-full"
             src="/images/portfolioimg1.jpg"
@@ -21,7 +18,7 @@ function Hero(): JSX.Element {
         <div className="flex items-center flex-col justify-center">
           <h1 className={styles.hello}>Hello I am</h1>
           <h1 className={styles.title}>Shadman Shakib</h1>
-          <h1 className="text-xl font-semibold mt-3">
+          <h1 className="text-xl text-center   font-semibold mt-3">
             React/React Native, Firebase Developer
           </h1>
 
