@@ -46,7 +46,7 @@ const ReverseCard = ({ name, description, src }: ServiceCard) => {
 function Services(): JSX.Element {
   return (
     <div className="flex flex-col justify-center my-10 items-center">
-      <h1 className="text-2xl mb-6 font-semibold py-2 px-5 rounded-md ">
+      <h1 className="text-xl mb-6 xl:text-5xl font-semibold py-2 px-5 rounded-md ">
         What I do
       </h1>
       <div className="">
