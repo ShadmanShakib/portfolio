@@ -9,7 +9,7 @@
   background-clip: text;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  @apply text-xl font-semibold xl:text-3xl;
+  @apply text-xl font-semibold xl:text-5xl;
 }
 
 .hello {
