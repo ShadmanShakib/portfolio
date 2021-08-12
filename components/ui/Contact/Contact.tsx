@@ -72,7 +72,7 @@ function Contactme(): JSX.Element {
               <ErrorMessage name="email" />
             </div>
             <label
-              className="xl:text-xl text-white mt-5 mb-2"
+              className="xl:text-xl dark:text-white mt-5 mb-2"
               htmlFor="message"
             >
               Message:
