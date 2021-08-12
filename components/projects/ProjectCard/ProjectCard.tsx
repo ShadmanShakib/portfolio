@@ -13,7 +13,10 @@ function ProjectCard({ items }: any): JSX.Element {
           const { title, thumbnails = {}, resourceId = {} } = snippet;
           const { standard } = thumbnails;
           return (
-            <div key={id} className="p-2 shadow-md rounded-sm">
+            <div
+              key={id}
+              className="p-2 dark:bg-white hover:shadow-xl shadow-md rounded-sm"
+            >
               <a
                 href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}
                 rel="noopener noreferrer"
@@ -26,7 +29,7 @@ function ProjectCard({ items }: any): JSX.Element {
                   src={standard.url}
                   alt=""
                 />
-                <h1 className="text-xl py-2 ">{title}</h1>
+                <h1 className="text-xl py-2 text-gray-900 ">{title}</h1>
               </a>
             </div>
           );

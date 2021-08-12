@@ -10,7 +10,7 @@ function Hero(): JSX.Element {
         <div className=" relative   rounded-full">
           <img
             className="xl:w-64 w-48 h-48 relative z-10 xl:h-64 rounded-full"
-            src="/images/portfolioimg1.jpg"
+            src="/images/shadman.jpg"
           />
         </div>
 
