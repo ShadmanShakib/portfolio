@@ -52,6 +52,15 @@ function Services(): JSX.Element {
       <div className="">
         <Card
           src="/images/ecom.svg"
+          name="React Native Apps"
+          description={[
+            "Android and IOS apps",
+            "Firebase Intregration",
+            "Custom API integration",
+          ]}
+        />
+        <Card
+          src="/images/ecom.svg"
           name="E-commerce Development"
           description={[
             "Shopify Integration",

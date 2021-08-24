@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         primary: "#663399",
         primarybg: "#040d21",
+        secondary: "rgb(18, 131, 218)",
       },
       fontFamily: {
         body: ["Roboto", "san-sarif"],
