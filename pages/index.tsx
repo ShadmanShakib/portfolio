@@ -4,7 +4,7 @@ import { ProjectCard } from "@components/projects";
 
 export default function Home({ data }: any): JSX.Element {
   return (
-    <div className="max-w-screen-xl dark:bg-gray-700 mx-auto">
+    <div className="max-w-screen-xl  mx-auto">
       <Hero />
       <About />
       <Services />
