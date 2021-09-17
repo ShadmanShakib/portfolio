@@ -4,7 +4,15 @@ import { Menu, Light, Dark } from "@components/icons";
 import { Portal } from "@reach/portal";
 import PhoneMenu from "../PhoneMenu";
 import { useDarkMode } from "libs/hooks";
-
+const MenuData = [
+  { id: "fhdofaod", title: "Home", href: "/" },
+  { id: "hgodhbodf", title: "Blog", href: "/blog" },
+  { id: "cliehbboidc", title: "Projects", href: "/projects" },
+  // { id: "laociehg", title: "", href: "/projects" },
+  // { id: "daldfkdfkdkfv", title: "", href: "" },
+  // { id: "hfhoichyrghskx", title: "", href: "" },
+  // { id: "klcieioighozhve", title: "", href: "" },
+];
 function Header(): JSX.Element {
   const { mode, currentMode, setCurrentMode } = useDarkMode();
   const [isOpen, setIsOpen] = React.useState(false);
@@ -19,9 +27,13 @@ function Header(): JSX.Element {
             <div onClick={handleClick} className="xl:hidden p-2 bg-gray-200">
               <Menu className="xl:hidden" />
             </div>
-            <h1 className=" block font-bold text-xl dark:text-white text-black">
+            <div className=" flex items-center font-bold  text-xl dark:text-white text-black">
+              <img
+                className="h-8 w-8 mr-2 rounded-full"
+                src="/images/logo.jpg"
+              />
               <Link href="/">Shadman Shakib</Link>
-            </h1>
+            </div>
             <div
               onClick={() => setCurrentMode(mode)}
               className="xl:hidden flex justify-center items-center"
@@ -35,16 +47,14 @@ function Header(): JSX.Element {
           </div>
 
           {/* Large Screen Menu */}
-          <ul className="hidden uppercase  xl:flex items-center justify-around w-96">
-            <Link href="/aboutme">
-              <span className="dark:text-white">About me</span>
-            </Link>
-            <Link href="/blog">
-              <span className="dark:text-white">Blog</span>
-            </Link>
-            <Link href="/projects">
-              <span className="dark:text-white">Projects</span>
-            </Link>
+          <ul className="hidden uppercase  xl:flex items-center justify-around ">
+            {MenuData.map((item) => {
+              return (
+                <Link key={item.id} href={item.href}>
+                  {item.title}
+                </Link>
+              );
+            })}
             <div
               onClick={() => setCurrentMode(mode)}
               className="hidden xl:block"

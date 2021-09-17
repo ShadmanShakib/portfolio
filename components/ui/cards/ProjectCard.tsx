@@ -8,14 +8,14 @@ function ProjectCard({ items }: any): JSX.Element {
           ProjectCard
         </h1>
       </div>
-      <div className="grid xl:grid-cols-3 mb-10   gap-x-3 gap-y-6 px-3 mt-10 justify-items-center">
+      <div className="grid xl:grid-cols-3 mb-10 gap-x-3 gap-y-6 px-3 mt-10 justify-items-center">
         {items.map(({ id, snippet = {} }: any) => {
           const { title, thumbnails = {}, resourceId = {} } = snippet;
           const { standard } = thumbnails;
           return (
             <div
               key={id}
-              className="p-2  bg-white hover:shadow-xl shadow-md rounded-md "
+              className="p-2 bg-white hover:shadow-xl shadow-md rounded-sm"
             >
               <a
                 href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}

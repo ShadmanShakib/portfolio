@@ -49,49 +49,7 @@ function Services(): JSX.Element {
       <h1 className="text-xl mb-6 xl:text-5xl font-semibold py-2 px-5 rounded-md ">
         What I do
       </h1>
-      <div className="">
-        <Card
-          src="/images/ecom.svg"
-          name="React Native Apps"
-          description={[
-            "Android and IOS apps",
-            "Firebase Intregration",
-            "Custom API integration",
-          ]}
-        />
-        <Card
-          src="/images/ecom.svg"
-          name="E-commerce Development"
-          description={[
-            "Shopify Integration",
-            "Fast Loading",
-            "Stripe Payment",
-            "Progressive Web Apps",
-            "JAMStack",
-          ]}
-        />
-        <ReverseCard
-          src="/images/jamimg.svg"
-          name="JAMStack Development"
-          description={[
-            "Next JS prerendering",
-            "CDN",
-            "API ingegration",
-            "Personalize content",
-          ]}
-        />
-        <Card
-          src="/images/saasimg.svg"
-          name="SaaS Development"
-          description={[
-            "Responsive Charts",
-            "Maps Integration",
-            "API integration (Restful or GraphQL)",
-            "Clean Code",
-            "Standard Pattern of future scaling",
-          ]}
-        />
-      </div>
+      <div className=""></div>
     </div>
   );
 }
