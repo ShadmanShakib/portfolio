@@ -3,7 +3,7 @@ import styles from "./About.module.css";
 
 function Aboutme(): JSX.Element {
   return (
-    <div className="flex ">
+    <div className="flex flex-col xl:flex-row">
       <img className="" src="/images/aboutmeimg.svg" alt="about me" />
 
       <div className=" flex items-center dark:bg-gray-700  flex-col justify-center px-4">
