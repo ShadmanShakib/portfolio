@@ -3,7 +3,7 @@ import React from "react";
 function ProjectCard({ items }: any): JSX.Element {
   return (
     <React.Fragment>
-      <div className=" flex items-center justify-center">
+      <div className=" flex items-center justify-center ">
         <h1 className="text-2xl font-semibold py-2 px-5 rounded-md text-white bg-green-500">
           ProjectCard
         </h1>

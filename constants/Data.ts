@@ -1,7 +1,8 @@
 export const SkillsData = [
   { id: "adhfoafodaf", name: "React", img: "/images/react.png" },
+  { id: "hfhdhfdo", name: "React Native", img: "/images/react.png" },
   { id: "scohbounalgv", name: "Redux", img: "/images/redux.svg" },
-  { id: "lhghhboeigg", name: "Next JS", img: "/images/next-js.svg" },
+  { id: "lhghhboeigg", name: "Next JS", img: "/images/next-js.png" },
   { id: "ljvoufhhhb", name: "Graphql", img: "/images/graphql.svg" },
   { id: "aoeivnaoinc", name: "Node JS", img: "/images/nodejs.svg" },
   { id: "oeihghhoeooeov", name: "Git", img: "/images/Giticon.png" },
