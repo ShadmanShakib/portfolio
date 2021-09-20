@@ -1,7 +1,7 @@
 import React from "react";
 import { SkillsData } from "@constants/index";
 import { SkillCard } from "@components/ui/cards";
-
+import style from "./Skills.module.css";
 function Skills(): JSX.Element {
   return (
     <React.Fragment>
@@ -12,10 +12,7 @@ function Skills(): JSX.Element {
           </h1>
         </div>
 
-        <div
-          style={{ width: "3000px" }}
-          className=" flex flex-nowrap overflow-x-scroll "
-        >
+        <div className={style.skillanimation}>
           {SkillsData.map((skill) => {
             return (
               <SkillCard key={skill.id} title={skill.name} src={skill.img} />
