@@ -1,16 +1,22 @@
 import React from "react";
-import { Hero, About, Services, Contact, Skills } from "@components/ui";
 import { ProjectCard } from "@components/projects";
+import {
+  SKillScetion,
+  AboutSection,
+  ServicesSection,
+  ContactSection,
+  HeroSection,
+} from "@components/sections";
 
 export default function Home({ data }: any): JSX.Element {
   return (
-    <div className="max-w-screen-xl bg-gray-100 mx-auto">
-      <Hero />
-      <About />
-      <Services />
-      <Skills />
+    <div className="max-w-screen-xl overflow-hidden bg-gray-100 mx-auto">
+      <HeroSection />
+      <AboutSection />
+      <ServicesSection />
+      <SKillScetion />
       <ProjectCard items={data.items} />
-      <Contact />
+      <ContactSection />
     </div>
   );
 }
