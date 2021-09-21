@@ -21,7 +21,7 @@ function Header(): JSX.Element {
   };
   return (
     <>
-      <div className="h-14 z-40 shadow-sm  flex items-center fixed w-full  px-6 dark:bg-gray-800   bg-indigo-100">
+      <div className="h-14 z-40 shadow-lg flex items-center fixed w-full  px-6    bg-white ">
         <div className="flex items-center  justify-between max-w-screen-xl mx-auto  w-full ">
           <div className="flex items-center w-full justify-between xl:w-auto">
             <div onClick={handleClick} className="xl:hidden p-2 bg-gray-200">
