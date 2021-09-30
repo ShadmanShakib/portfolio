@@ -88,7 +88,7 @@ function Contactme(): JSX.Element {
               <ErrorMessage name="message" />
             </div>
             <button
-              className="bg-primary  font-semibold focus:outline-none text-white rounded-sm mt-10 px-3 py-2"
+              className="bg-c5  font-semibold focus:outline-none text-white rounded-sm mt-10 px-3 py-2"
               type="submit"
             >
               MESSAGE

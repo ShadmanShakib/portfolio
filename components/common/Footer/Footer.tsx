@@ -3,7 +3,7 @@ import React from "react";
 
 function Footer(): JSX.Element {
   return (
-    <div className="bg-gray-800 px-4 py-10 max-w-screen-xl mx-auto text-white xl:px-16 grid xl:grid-cols-4 ">
+    <div className="bg-gray-50 text-gray-900  px-4 py-10 max-w-screen-xl mx-auto  xl:px-16 grid xl:grid-cols-4 ">
       <div className="flex flex-col mb-4">
         <h1 className="text-lg">Useful Links</h1>
         <Link href="/">Home</Link>
