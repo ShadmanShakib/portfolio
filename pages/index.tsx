@@ -10,12 +10,14 @@ import {
 
 export default function Home({ data }: any): JSX.Element {
   return (
-    <div className="max-w-screen-xl overflow-hidden bg-gray-100 mx-auto">
+    <div className="max-w-screen-xl bg-white overflow-hidden mx-auto">
       <HeroSection />
       <AboutSection />
       <ServicesSection />
       <SKillScetion />
-      <ProjectCard items={data.items} />
+      <div className="bg-c3">
+        <ProjectCard items={data.items} />
+      </div>
       <ContactSection />
     </div>
   );

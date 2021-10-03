@@ -13,5 +13,5 @@
 }
 
 .hello {
-  @apply font-semibold mt-16  bg-primary  py-2 mb-3  text-white rounded-tl-3xl px-5  text-center rounded-r-3xl;
+  @apply font-semibold mt-16  bg-c1  py-2 mb-3  text-white rounded-t-3xl px-5  text-center rounded-r-3xl;
 }
