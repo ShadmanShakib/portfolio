@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-
+import styles from "./Post.module.css";
 interface Props {
   title: string;
   images: [{ url: string }];
