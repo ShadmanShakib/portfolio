@@ -1,12 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Navbar } from "@sections/common";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-
+import { Hero } from "@sections/homepage";
+import s from "../styles/Home.module.css";
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className={s.container}>
       <Head>
         <title>Shadman Shakib</title>
         <link
@@ -16,6 +15,7 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <Navbar />
+        <Hero />
       </main>
     </div>
   );
