@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./Navbar.module.css";
-import { MdMenu, MdDarkMode } from "react-icons/md";
+import { MdMenu } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
 
 interface Props {
@@ -15,7 +16,7 @@ export default function Navbar(props: Props) {
       </div>
       <Image src={src} alt="logo" className={s.logo} width={50} height={50} />
       <div className="">
-        <MdDarkMode size={30} />
+        <FaLinkedin size={30} />
       </div>
     </div>
   );
