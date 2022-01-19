@@ -14,7 +14,7 @@ const Home: NextPage = ({ data }: any) => {
         />
       </Head>
       <main>
-        <Navbar />
+        <Navbar src={data.avatar_url} />
         <Hero src={data.avatar_url} />
       </main>
     </div>
