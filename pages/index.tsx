@@ -1,12 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Navbar } from "@sections/common";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-
-const Home: NextPage = () => {
+import { Hero } from "@sections/homepage";
+import s from "../styles/Home.module.css";
+const Home: NextPage = ({ data }: any) => {
   return (
-    <div>
+    <div className={s.container}>
       <Head>
         <title>Shadman Shakib</title>
         <link
@@ -16,9 +15,18 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <Navbar />
+        <Hero src={data.avatar_url} />
       </main>
     </div>
   );
 };
 
 export default Home;
+export async function getStaticProps() {
+  // Fetch data from external API
+  const res = await fetch(`https://api.github.com/users/shadmanshakib`);
+  const data = await res.json();
+
+  // Pass data to the page via props
+  return { props: { data } };
+}

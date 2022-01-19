@@ -1,0 +1,5 @@
+.main {
+}
+.profile_image {
+  @apply rounded-full;
+}

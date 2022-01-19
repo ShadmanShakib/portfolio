@@ -1,5 +1,5 @@
 .main {
-  @apply fixed top-0 w-full flex shadow-md pl-4 h-16 z-50 justify-between items-center;
+  @apply fixed top-0 w-full flex text-gray-400 shadow-md pl-4 h-16 z-50 justify-between items-center;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   background-color: #000000a6;
