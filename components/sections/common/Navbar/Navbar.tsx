@@ -16,7 +16,9 @@ export default function Navbar(props: Props) {
       </div>
       <Image src={src} alt="logo" className={s.logo} width={50} height={50} />
       <div className="">
-        <FaLinkedin size={30} />
+        <a href="https://www.linkedin.com/in/shadmanshakib007">
+          <FaLinkedin size={30} />
+        </a>
       </div>
     </div>
   );
