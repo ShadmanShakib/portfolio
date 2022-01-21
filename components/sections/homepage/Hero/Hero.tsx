@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import s from "./Hero.module.css";
+import { Button } from "@ui/index";
 interface Props {
   src: string;
 }
@@ -15,19 +16,24 @@ function Hero(props: Props) {
   }, [skills.length]);
   return (
     <section className={s.main}>
-      <Image
-        className={s.profile_image}
-        alt="Shadman Shakib"
-        src={props.src}
-        width={300}
-        height={300}
-      />
-      <h1 className="text-white text-3xl">
+      <div className="pt-10 pb-5 ">
+        <Image
+          className={s.profile_image}
+          alt="Shadman Shakib"
+          src={props.src}
+          width={300}
+          height={300}
+        />
+      </div>
+      <h1 className="text-white text-3xl text-center mb-6">
         Hi, Im <span>Shadman Shakib </span>
         <br />
         <span className={s.shine}>{skills[state]} </span>
         developer
       </h1>
+      <a href="https://www.upwork.com/workwith/shadmanshakib007">
+        <Button>Hire me</Button>
+      </a>
     </section>
   );
 }
