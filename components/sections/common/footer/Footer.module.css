@@ -1,0 +1,6 @@
+.main {
+  @apply bg-slate-900;
+}
+.icon {
+  @apply text-white;
+}
