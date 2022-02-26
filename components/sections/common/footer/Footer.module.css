@@ -1,5 +1,5 @@
 .main {
-  @apply bg-slate-900;
+  @apply bg-slate-900 flex flex-col items-center p-6;
 }
 .icon {
   @apply text-white;

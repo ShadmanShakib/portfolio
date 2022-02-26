@@ -5,7 +5,7 @@ import { Hero } from "@sections/homepage";
 import s from "../styles/Home.module.css";
 const Home: NextPage = ({ data }: any) => {
   return (
-    <div className={s.container}>
+    <div className={s.main}>
       <Head>
         <title>Shadman Shakib</title>
         <link
@@ -13,9 +13,12 @@ const Home: NextPage = ({ data }: any) => {
           href="https://avatars.githubusercontent.com/u/72305492?s=96&v=4"
         />
       </Head>
-      <main>
-        <Navbar src={data.avatar_url} />
-        <Hero src={data.avatar_url} />
+      <main className=" ">
+        <div className="max-w-screen-xl mx-auto">
+          <Navbar src={data.avatar_url} />
+          <Hero src={data.avatar_url} />
+        </div>
+
         <Footer />
       </main>
     </div>
