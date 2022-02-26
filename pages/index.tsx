@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Navbar } from "@sections/common";
+import { Footer, Navbar } from "@sections/common";
 import { Hero } from "@sections/homepage";
 import s from "../styles/Home.module.css";
 const Home: NextPage = ({ data }: any) => {
@@ -16,6 +16,7 @@ const Home: NextPage = ({ data }: any) => {
       <main>
         <Navbar src={data.avatar_url} />
         <Hero src={data.avatar_url} />
+        <Footer />
       </main>
     </div>
   );
