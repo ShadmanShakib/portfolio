@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Footer, Navbar } from "@sections/common";
-import { Hero } from "@sections/homepage";
+import { Hero, Projects } from "@sections/homepage";
+import { getPlaylist } from "services";
 import s from "../styles/Home.module.css";
-const Home: NextPage = ({ data }: any) => {
+const Home: NextPage = ({ data, playlist }: any) => {
   return (
     <div className={s.main}>
       <Head>
@@ -17,6 +18,7 @@ const Home: NextPage = ({ data }: any) => {
         <div className="max-w-screen-xl mx-auto">
           <Navbar src={data.avatar_url} />
           <Hero src={data.avatar_url} />
+          <Projects playlist={playlist} />
         </div>
 
         <Footer />
@@ -30,6 +32,8 @@ export async function getStaticProps() {
   // Fetch data from external API
   const res = await fetch(`https://api.github.com/users/shadmanshakib`);
   const data = await res.json();
+  //geting playlist
+  // const playlist = await getPlaylist();
 
   // Pass data to the page via props
   return { props: { data } };
