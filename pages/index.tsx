@@ -33,8 +33,8 @@ export async function getStaticProps() {
   const res = await fetch(`https://api.github.com/users/shadmanshakib`);
   const data = await res.json();
   //geting playlist
-  // const playlist = await getPlaylist();
+  const playlist = await getPlaylist();
 
   // Pass data to the page via props
-  return { props: { data } };
+  return { props: { data, playlist } };
 }
