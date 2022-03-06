@@ -6,6 +6,7 @@ export default async function getPlaylist() {
     `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&maxResults=50&playlistId=PLQQpv-6Xxb2kKiyDd-s3gNkxp72hbbjDb&key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}`
   );
 
-  const data = await res.json();
-  return data.items;
+  const playlist = await res.json();
+
+  return { playlist };
 }

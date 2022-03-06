@@ -1,15 +1,29 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
+import _ from "underscore";
 import type { ProjectProps } from "./types";
-import { getPlaylist } from "services";
+
 function Projects(props: ProjectProps) {
+  const { playlist } = props;
   return (
-    <div>
-      Projects
-      <pre>{JSON.stringify(props.playlist, null, 2)}</pre>
-      <button className="bg-white p-10" onClick={getPlaylist}>
-        Get Data
-      </button>
-    </div>
+    <>
+      <h1 className="text-white text-3xl text-center">Projects</h1>
+
+      <div className="grid grid-cols-3">
+        {_.map(playlist.items, (item) => {
+          const { id, snippet } = item;
+          const { title, description, publishedAt, thumbnails } = snippet;
+          return (
+            <div key={id} className="text-white">
+              <img src={thumbnails.medium.url} alt={title} />
+              <div className="">
+                <h1 className="text-xl">{title}</h1>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 }
 
