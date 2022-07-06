@@ -10,15 +10,17 @@ interface Props {
 export default function Navbar(props: Props) {
   const { src } = props;
   return (
-    <div className={s.main}>
-      <div className={s.menu}>
-        <MdMenu size={30} />
+    <div className="flex items-center xl:justify-between">
+      <div className="flex items-center">
+        <Image src={src} alt="logo" className={s.logo} width={50} height={50} />
+        <h1 className="text-white ml-5 text-xl">Shadman Shakib</h1>
       </div>
-      <Image src={src} alt="logo" className={s.logo} width={50} height={50} />
-      <div className="">
-        <a href="https://www.linkedin.com/in/shadmanshakib007">
-          <FaLinkedin size={30} />
-        </a>
+      <div className="text-white">
+        <a href="">About</a>
+        <a href="">Projects</a>
+        <a href="">Services</a>
+        <a href="">Blog</a>
+        <a href="">Hire me today </a>
       </div>
     </div>
   );

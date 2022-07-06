@@ -16,24 +16,17 @@ function Hero(props: Props) {
   }, [skills.length]);
   return (
     <section className={s.main}>
-      <div className="pt-10 pb-5 ">
-        <Image
-          className={s.profile_image}
-          alt="Shadman Shakib"
-          src={props.src}
-          width={300}
-          height={300}
-        />
+      <div className="flex items-center text-xl text-white font-bold">
+        <h1>Imagine.</h1>
+        <h1>Develop.</h1>
+        <h1>Shift.</h1>
       </div>
-      <h1 className="text-white text-3xl text-center mb-6">
-        Hi, Im <span>Shadman Shakib </span>
-        <br />
-        <span className={s.shine}>{skills[state]} </span>
-        developer
-      </h1>
-      <a href="https://www.upwork.com/workwith/shadmanshakib007">
-        <Button>Hire me</Button>
-      </a>
+      <div className="">
+        <h1 className="text-3xl text-white">
+          I create beautiful websites your users will love
+        </h1>
+      </div>
+      <button className="bg-gray-900 text-white">Make it happen</button>
     </section>
   );
 }
