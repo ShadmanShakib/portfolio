@@ -3,6 +3,7 @@ import s from "./Navbar.module.css";
 import { MdMenu } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
   src: string;
@@ -16,7 +17,9 @@ export default function Navbar(props: Props) {
         <h1 className="text-white ml-5 text-xl">Shadman Shakib</h1>
       </div>
       <div className="text-white">
-        <a href="">About</a>
+        <a>
+          <Link href="/about">About</Link>
+        </a>
         <a href="">Projects</a>
         <a href="">Services</a>
         <a href="">Blog</a>

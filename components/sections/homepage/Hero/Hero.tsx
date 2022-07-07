@@ -22,9 +22,7 @@ function Hero(props: Props) {
         <h1>Shift.</h1>
       </div>
       <div className="">
-        <h1 className="text-3xl text-white">
-          I create beautiful websites your users will love
-        </h1>
+        <h1 className="text-3xl text-white">I build thing for the web</h1>
       </div>
       <button className="bg-gray-900 text-white">Make it happen</button>
     </section>
