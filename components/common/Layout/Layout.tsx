@@ -3,7 +3,7 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 function Layout({ children }: any) {
   return (
-    <div>
+    <div style={{ backgroundColor: "#23252F" }}>
       <Navbar />
       {children}
       <Footer />

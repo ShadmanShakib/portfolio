@@ -6,6 +6,14 @@ function Navbar() {
       <Link href="/">
         <a>Shadman Shakib</a>
       </Link>
+      <div>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+        <Link href="/projects">
+          <a>Projects</a>
+        </Link>
+      </div>
     </div>
   );
 }
