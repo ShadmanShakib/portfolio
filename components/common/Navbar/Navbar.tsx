@@ -1,30 +1,27 @@
 import React from "react";
 import Link from "next/link";
-import { BsList } from "react-icons/bs";
+import { HiMenu } from "react-icons/hi";
 import { Button } from "components/ui";
+import DropDown from "./DropDown";
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   return (
-    <nav className="flex h-16 items-center justify-between px-6 text-white">
-      <div>
-        <BsList size={30} color="white" />
+    <nav className="relative h-16 ">
+      <div className="flex items-center justify-around text-white">
+        <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <HiMenu size={30} color="white" />
+        </button>
+        <Link href="/">
+          <a>Shadman Shakib</a>
+        </Link>
+        <Button variant="primary">
+          <Link href="/contact">
+            <a>Contact</a>
+          </Link>
+        </Button>
       </div>
-      <Link href="/">
-        <a>Shadman Shakib</a>
-      </Link>
 
-      <div className="hidden">
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-        <Link href="/projects">
-          <a>Projects</a>
-        </Link>
-      </div>
-      <Button variant="primary">
-        <Link href="/contact">
-          <a>Contact</a>
-        </Link>
-      </Button>
+      <DropDown isMenuOpen={isMenuOpen} />
     </nav>
   );
 }
