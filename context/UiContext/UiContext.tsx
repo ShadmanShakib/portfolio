@@ -1,14 +1,31 @@
 import React, { useEffect, useMemo, useReducer, useCallback } from "react";
-import { UiState } from "./UiContext.types";
+import { UiState, UiActions } from "./UiContext.types";
+const initialState: UiState = {
+  isMenuOpen: false,
+  isLoading: false,
+};
 const UiContext = React.createContext<UiState | any>({});
 
-const UiReducer = (state: UiState, action: any) => {
+const UiReducer = (state: UiState, action: UiActions) => {
   switch (action.type) {
-    case "SET_IS_LOADING":
-      return { ...state, isLoading: action.payload };
-    case "SET_IS_MENU_OPEN":
-      return { ...state, isMenuOpen: action.payload };
+    case "TOGGLE_MENU":
+      return { ...state, isMenuOpen: !state.isMenuOpen };
     default:
       return state;
   }
 };
+
+export const UiProvider = ({ children }: any) => {
+  const [state, dispatch] = useReducer(UiReducer, initialState);
+
+  const setIsMenuOpen = useCallback(
+    (isMenuOpen: boolean) => {
+      dispatch({ type: "TOGGLE_MENU" });
+    },
+    [dispatch]
+  );
+  const value = useMemo(() => ({ ...state, setIsMenuOpen }), [state]);
+  return <UiContext.Provider value={value}>{children}</UiContext.Provider>;
+};
+
+export default UiContext;
