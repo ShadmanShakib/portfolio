@@ -3,7 +3,7 @@ import Link from "next/link";
 import { HiMenu } from "react-icons/hi";
 import { Button } from "components/ui";
 import DropDown from "./DropDown";
-import { useUI } from "hooks";
+import { useUI } from "utils/hooks";
 function Navbar() {
   const { setIsMenuOpen } = useUI();
   return (

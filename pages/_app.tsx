@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import { MainProvider } from "context";
+import { MainProvider } from "utils/context";
 import { FC, useEffect } from "react";
 import type { AppProps } from "next/app";
 const Noop: FC = ({ children }: any) => <>{children}</>;

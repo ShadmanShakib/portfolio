@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { HiX } from "react-icons/hi";
-import { useUI } from "hooks";
+import { useUI } from "utils/hooks";
 function DropDown(props: any) {
   const { isMenuOpen, setIsMenuOpen } = useUI();
   const varients = {

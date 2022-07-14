@@ -1,4 +1,4 @@
-import { UiContext } from "context";
+import { UiContext } from "utils/context";
 import React from "react";
 
 const useUI = () => {
