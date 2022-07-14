@@ -3,12 +3,13 @@ import Link from "next/link";
 import { HiMenu } from "react-icons/hi";
 import { Button } from "components/ui";
 import DropDown from "./DropDown";
+import { useUI } from "hooks";
 function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const { setIsMenuOpen } = useUI();
   return (
     <nav className="relative h-16 ">
       <div className="flex items-center justify-around text-white">
-        <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button onClick={setIsMenuOpen}>
           <HiMenu size={30} color="white" />
         </button>
         <Link href="/">
@@ -21,7 +22,7 @@ function Navbar() {
         </Button>
       </div>
 
-      <DropDown isMenuOpen={isMenuOpen} />
+      <DropDown />
     </nav>
   );
 }

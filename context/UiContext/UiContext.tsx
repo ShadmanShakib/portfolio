@@ -18,12 +18,9 @@ const UiReducer = (state: UiState, action: UiActions) => {
 export const UiProvider = ({ children }: any) => {
   const [state, dispatch] = useReducer(UiReducer, initialState);
 
-  const setIsMenuOpen = useCallback(
-    (isMenuOpen: boolean) => {
-      dispatch({ type: "TOGGLE_MENU" });
-    },
-    [dispatch]
-  );
+  const setIsMenuOpen = useCallback(() => {
+    dispatch({ type: "TOGGLE_MENU" });
+  }, [dispatch]);
   const value = useMemo(() => ({ ...state, setIsMenuOpen }), [state]);
   return <UiContext.Provider value={value}>{children}</UiContext.Provider>;
 };
