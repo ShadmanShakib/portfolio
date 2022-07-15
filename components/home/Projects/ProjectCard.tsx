@@ -1,9 +1,11 @@
 import React from "react";
-
-function ProjectCard() {
+import { ProjectCardProps } from "./Project.d";
+function ProjectCard(props: ProjectCardProps) {
+  const { title, thumbnail } = props;
   return (
     <article>
-      <h1 className="text-white">Project Card</h1>
+      {thumbnail && <img src={thumbnail} alt={title} />}
+      <h1 className="text-white">{title}</h1>
     </article>
   );
 }

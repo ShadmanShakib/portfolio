@@ -1,5 +1,6 @@
 import { initializeApp, getApps } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { getStorage, ref } from "firebase/storage";
 const firebaseConfig = {
   apiKey: "AIzaSyBWnqlzQm9PnmU_5kL38wRjI8sKST1H0pA",
   authDomain: "shadman-shakib-portfolio.firebaseapp.com",
@@ -17,8 +18,11 @@ function initFirebase() {
     console.log("firebase initialized");
   }
 }
-
+// initFirebase();
 const app = initializeApp(firebaseConfig);
+//stores the firebase app in the window object
+const storage = getStorage(app);
 
+//firestore database connection
 const db = getFirestore(app);
-export { initFirebase, db, app };
+export { initFirebase, db, app, storage };
