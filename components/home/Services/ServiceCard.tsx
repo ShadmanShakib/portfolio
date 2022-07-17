@@ -19,13 +19,12 @@ function ServiceCard(props: ServiceCardProps) {
     ) : null;
   return (
     <article
-      className="flex flex-col  rounded-sm bg-white p-4 shadow-lg"
+      className="flex flex-col  rounded-sm bg-white p-6 shadow-lg  hover:shadow-lime-500"
       key={id}
     >
-      <div>{icon}</div>
-
-      <h2 className="text-xl font-semibold">{title}</h2>
-      <p>{description}</p>
+      <div className="mb-2">{icon}</div>
+      <h2 className="mb-2 text-lg font-semibold">{title}</h2>
+      <p className="text-sm">{description}</p>
     </article>
   );
 }
