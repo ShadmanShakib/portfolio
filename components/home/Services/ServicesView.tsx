@@ -1,16 +1,20 @@
 import React from "react";
-
+import ServiceCard from "./ServiceCard";
+import { ServicesData } from "./ServiceData";
+import { map } from "underscore";
 function ServicesView() {
   return (
-    <div>
-      <h1>Services I provide</h1>
-      <p>I provide services in the following areas:</p>
-      <ul>
-        <li>Frontend Development</li>
-        <li>Mobile Development</li>
-        <li>API integration</li>
-      </ul>
-    </div>
+    <section>
+      <h1 className="mb-10 text-center text-3xl font-semibold text-white">
+        My Services
+      </h1>
+
+      <div className="grid gap-6 xl:grid-cols-3">
+        {map(ServicesData, (service) => (
+          <ServiceCard key={service.id} service={service} />
+        ))}
+      </div>
+    </section>
   );
 }
 
