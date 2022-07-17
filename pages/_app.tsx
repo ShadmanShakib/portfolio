@@ -1,9 +1,21 @@
 import "../styles/globals.css";
+import { MainProvider } from "utils/context";
+import { FC, useEffect } from "react";
 import type { AppProps } from "next/app";
-import { initializeApp } from "firebase/app";
+const Noop: FC = ({ children }: any) => <>{children}</>;
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+export default function MyApp({ Component, pageProps }: AppProps) {
+  const Layout = (Component as any).Layout || Noop;
+
+  useEffect(() => {
+    document.body.classList?.remove("loading");
+  }, []);
+
+  return (
+    <MainProvider>
+      <Layout pageProps={pageProps}>
+        <Component {...pageProps} />
+      </Layout>
+    </MainProvider>
+  );
 }
-
-export default MyApp;
