@@ -4,19 +4,20 @@ export const ServicesData = [
     title: "Frontend Development",
     varient: "web",
     description:
-      "I build responsive, mobile-first, and cross-browser web applications with Next JS.",
+      "I build responsive, mobile-first, and cross-browser web applications with React JS / Next JS.",
   },
   {
     id: 2,
     varient: "mobile",
     title: "App Development",
     description:
-      "I am a web developer who is passionate about creating beautiful and functioal websites.",
+      "I build Build beatiful looking cross platform app with React Native and Expo.",
   },
   {
     id: 3,
     varient: "api",
     title: "API integration",
-    description: "API integraion in your React Js or Next Js application",
+    description:
+      "Restful or GraphQL API integration in web applications with Typescript.",
   },
 ];
