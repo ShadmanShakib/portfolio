@@ -7,24 +7,26 @@ function Contact() {
   return (
     <div className="py-10">
       <div className=" ">
-        <Image
-          layout="responsive"
-          src="/images/contactme.jpg"
-          alt="contact"
-          width={100}
-          height={50}
-        />
-        <h2 style={{ color: "#08fdd8" }} className="text-4xl font-semibold">
+        <h2
+          style={{ color: "#08fdd8" }}
+          className="text-center text-4xl font-semibold"
+        >
           Get in touch!
         </h2>
-        <p className="text-white">
+        <p className="text-center text-white">
           Im interested in freelance opportunities - especially ambitious ones.
           However, if you have any other request or question, dont hesitate to
           use the form.
         </p>
-
-        <form className=" bg-gray-500 px-20 py-6">
-          <div className="grid gap-6 xl:grid-cols-2 ">
+        <div className="grid py-6 xl:grid-cols-2">
+          <Image
+            layout="responsive"
+            src="/images/mailbox.svg"
+            alt="contact"
+            width={100}
+            height={50}
+          />
+          <form className=" bg-gray-500 px-20 py-6">
             <div>
               <input
                 type="text"
@@ -54,14 +56,15 @@ function Contact() {
               placeholder="Message"
               {...register("message", { required: true })}
             />
-          </div>
-          <button
-            type="submit"
-            className="rounded-sm bg-gray-900 p-2 text-white"
-          >
-            Send
-          </button>
-        </form>
+
+            <button
+              type="submit"
+              className="rounded-sm bg-gray-900 p-2 text-white"
+            >
+              Send
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
