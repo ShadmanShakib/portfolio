@@ -6,6 +6,7 @@ import DropDown from "./DropDown";
 import { useUI } from "utils/hooks";
 import { getProfile } from "services/github";
 import Image from "next/image";
+import Avator from "./Avator";
 function Navbar() {
   const { setIsMenuOpen } = useUI();
   const [data, setData] = useState<any>(null);
@@ -18,27 +19,19 @@ function Navbar() {
     getData();
   }, []);
   return (
-    <nav className="relative h-16 ">
-      <div className="flex items-center justify-around text-white">
+    <nav className="relative ">
+      <div className="flex h-16 items-center justify-around text-white">
         <button className="lg:hidden" onClick={setIsMenuOpen}>
           <HiMenu size={30} color="white" />
         </button>
 
-        {data && (
-          <div className="flex items-center">
-            <Image
-              width={40}
-              height={40}
-              src={data.avatar_url}
-              className="rounded-full"
-              alt="avatar"
-            />
-            <Link href="/">
-              <a className="ml-4">{data.name}</a>
-            </Link>
-          </div>
-        )}
-
+        {data && <Avator {...data} />}
+        <a target="_black" href="https://shadmanshakib.hashnode.dev/">
+          Blog
+        </a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+        <a href="">Projects</a>
         <Button variant="primary">
           <Link href="/contact">
             <a>Hire me</a>
