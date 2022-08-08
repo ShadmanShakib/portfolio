@@ -1,18 +1,14 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
+import { Heading } from "components/ui";
 function Contact() {
   const { register } = useForm();
 
   return (
     <div className="py-10">
       <div className=" ">
-        <h2
-          style={{ color: "#08fdd8" }}
-          className="text-center text-4xl font-semibold"
-        >
-          Get in touch!
-        </h2>
+        <Heading>Get in Touch</Heading>
         <p className="text-center text-white">
           Im interested in freelance opportunities - especially ambitious ones.
           However, if you have any other request or question, dont hesitate to

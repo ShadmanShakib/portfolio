@@ -1,7 +1,8 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import { getProjects, getImage } from "services/firebase";
-
+import { Heading } from "components/ui";
+import { map } from "underscore";
 function Projects() {
   const [projectList, setProjectList] = React.useState<any>();
 
@@ -15,10 +16,10 @@ function Projects() {
   }, []);
   return (
     <section className="">
-      <h1 className="text-center text-3xl font-bold text-white">Projects</h1>
+      <Heading>Projects</Heading>
 
       {projectList &&
-        projectList.map((project: any) => {
+        map(projectList, (project: any) => {
           return (
             <ProjectCard
               key={project.thumbnail}
