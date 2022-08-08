@@ -1,7 +1,8 @@
 import React from "react";
 import { getPosts } from "services/hashnode";
-import _ from "underscore";
+import { map } from "underscore";
 import PostCard from "./PostCard";
+import { Heading } from "components/ui";
 function Blog() {
   const [posts, setPosts] = React.useState<any>([]);
   const getData = async () => {
@@ -16,10 +17,10 @@ function Blog() {
   }, []);
   return (
     <div>
-      <h1 className="text-3xl text-white">Posts</h1>
+      <Heading>Posts</Heading>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
         {posts &&
-          _.map(posts, (post) => {
+          map(posts, (post) => {
             return (
               <div key={post._id}>
                 <PostCard post={post} />

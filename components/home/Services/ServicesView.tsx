@@ -2,12 +2,11 @@ import React from "react";
 import ServiceCard from "./ServiceCard";
 import { ServicesData } from "./ServiceData";
 import { map } from "underscore";
+import { Heading } from "components/ui";
 function ServicesView() {
   return (
-    <section>
-      <h1 className="mb-10 text-center text-3xl font-semibold text-white">
-        My Services
-      </h1>
+    <section className="py-5">
+      <Heading>My Services</Heading>
 
       <div className="grid gap-6 xl:grid-cols-3">
         {map(ServicesData, (service) => (
