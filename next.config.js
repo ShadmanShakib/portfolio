@@ -1,10 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: {
-    domains: ["cdn.hashnode.com", "avatars.githubusercontent.com"],
-  },
-  reactStrictMode: true,
-  swcMinify: true,
-};
+const nextConfig = {}
 
-module.exports = nextConfig;
+module.exports = nextConfig

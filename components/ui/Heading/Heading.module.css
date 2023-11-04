@@ -1,8 +1,0 @@
-.heading {
-  @apply my-6 bg-clip-text text-center text-4xl font-semibold;
-  background: -webkit-linear-gradient(-70deg, #db469f 40%, #2188ff 100%);
-  -webkit-text-fill-color: transparent;
-
-  -webkit-background-clip: text;
-  background-clip: text;
-}
