@@ -1,7 +1,11 @@
 import React from "react";
 
 function Projects() {
-  return <div>Projects</div>;
+  return (
+    <section>
+      <h1>Projects</h1>
+    </section>
+  );
 }
 
 export default Projects;
